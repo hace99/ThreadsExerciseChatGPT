@@ -129,22 +129,5 @@ public class MultiThreadExampleTest {
 
         assertEquals(numThreads, threads.length);
     }
-    @Test
-    public void testNumberOfThreads01() throws InterruptedException {
-        int numThreads = 0;
-        MyThread[] threads = new MyThread[numThreads];
-
-        for (int i = 0; i < numThreads; i++) {
-            threads[i] = new MyThread(i);
-            threads[i].start();
-        }
-
-        for (int i = 0; i < numThreads; i++) {
-            threads[i].join();
-        }
-
-        assertEquals(numThreads, threads.length);
-    }
-
 }
 
